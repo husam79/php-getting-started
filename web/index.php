@@ -9,14 +9,13 @@ if( isset($_POST['username']) )
     echo 'no such user!';
   }
   else{
-    echo 'here 1';
+    
     $handle = fopen("data.txt", "r");
     if ($handle) {
-        echo 'here 2';
         
         while (($line = fgets($handle)) !== false) {
             if (strtolower(trim(explode(' ', $line)[0])) == $usr){
-                echo explode(' ', $line)[1];
+                echo "<b>" . $usr . ":" . explode(' ', $line)[1] . "</b>";
             }
         }
 
