@@ -2,10 +2,14 @@
 
 {% block content %}
 <div class="jumbotron text-center">
-<div class="group-control">
-  <label for="username" class="form-control">Username</label>
-  <input type="text" class="form-control" name="username" />
+  <div class="row">
+    <div class="orm-group col-md-4">
+      <label for="username" class="control-label">Username</label>
+      <input type="text" class="form-control" name="username" />
+    </div>
+  </div>
 </div>
 
 <button class="btn btn-active">Login</button>
+
 {% endblock %}
