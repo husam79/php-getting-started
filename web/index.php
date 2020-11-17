@@ -24,4 +24,15 @@ $app->get('/', function() use($app) {
 
 $app->run();*/
 
-echo "hello";
+$handle = fopen("data.txt", "r");
+if ($handle) {
+    while (($line = fgets($handle)) !== false) {
+        // process the line read.
+        echo $line;
+    }
+
+    fclose($handle);
+} else {
+    // error opening the file.
+    echo 'ERROR';
+} 
