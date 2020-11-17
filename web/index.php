@@ -15,7 +15,7 @@ if( isset($_POST['username']) )
         
         while (($line = fgets($handle)) !== false) {
             if (strtolower(trim(explode(' ', $line)[0])) == $usr){
-                echo "<b>" . explode(' ', $line)[1] . ":" . explode(' ', $line)[1] . "</b>";
+                echo "<b>" . explode(' ', $line)[0] . ":" . explode(' ', $line)[1] . "</b>";
             }
         }
 
