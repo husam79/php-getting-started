@@ -15,11 +15,7 @@ if( isset($_POST['username']) )
         echo 'here 2';
         
         while (($line = fgets($handle)) !== false) {
-            echo $line;
-            echo explode(' ', $line)[0];
-
-            echo trim(explode(' ', $line)[0]);
-            if (trim(explode(' ', $line)[0]) == $usr){
+            if (strtolower(trim(explode(' ', $line)[0])) == $usr){
                 echo explode(' ', $line)[1];
             }
         }
