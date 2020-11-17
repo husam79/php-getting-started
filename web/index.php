@@ -2,8 +2,27 @@
 
 if( isset($_POST['username']) )
 {
-  echo $_POST['username'];
-  echo $_POST['password'];
+  $usr = $_POST['username'];
+  $pwd = $_POST['password'];
+  
+  if(  !(($usr == 'meryem' and $pwd == 'vb') or ($usr == 'sara' and $pwd == 'sd')) )  {
+    echo 'no such user!';
+  }
+  else{
+    $handle = fopen("data.txt", "r");
+    if ($handle) {
+        while (($line = fgets($handle)) !== false) {
+            if (trim(explode(' ', $line)[0]) == $ur){
+                echo explode(' ', $line)[1];
+            }
+        }
+
+        fclose($handle);
+    } else {
+        // error opening the file.
+        echo 'ERROR';
+    }
+  }
   
 }
 else{
