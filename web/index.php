@@ -9,8 +9,12 @@ if( isset($_POST['username']) )
     echo 'no such user!';
   }
   else{
+    echo 'here 1';
     $handle = fopen("data.txt", "r");
     if ($handle) {
+        echo 'here 2';
+        echo explode(' ', $line);
+
         echo trim(explode(' ', $line)[0]);
         while (($line = fgets($handle)) !== false) {
             if (trim(explode(' ', $line)[0]) == $usr){
