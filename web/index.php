@@ -1,6 +1,6 @@
 <?php
 
-/*require('../vendor/autoload.php');
+require('../vendor/autoload.php');
 
 $app = new Silex\Application();
 $app['debug'] = true;
@@ -22,9 +22,9 @@ $app->get('/', function() use($app) {
   return $app['twig']->render('index.twig');
 });
 
-$app->run();*/
+$app->run();
 
-$handle = fopen("data.txt", "r");
+/*$handle = fopen("data.txt", "r");
 if ($handle) {
     while (($line = fgets($handle)) !== false) {
         // process the line read.
@@ -35,4 +35,4 @@ if ($handle) {
 } else {
     // error opening the file.
     echo 'ERROR';
-} 
+} */
