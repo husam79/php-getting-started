@@ -24,4 +24,4 @@ $app->get('/', function() use($app) {
 
 $app->run();*/
 
-echo 'hello'
+echo "hello";
