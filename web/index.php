@@ -13,10 +13,12 @@ if( isset($_POST['username']) )
     $handle = fopen("data.txt", "r");
     if ($handle) {
         echo 'here 2';
-        echo explode(' ', $line);
-
-        echo trim(explode(' ', $line)[0]);
+        
         while (($line = fgets($handle)) !== false) {
+            echo $line;
+            echo explode(' ', $line)[0];
+
+            echo trim(explode(' ', $line)[0]);
             if (trim(explode(' ', $line)[0]) == $usr){
                 echo explode(' ', $line)[1];
             }
