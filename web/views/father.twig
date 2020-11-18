@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<form method="post">
+  <div class="container" style="width:50%;">
+    <div class="row">
+      <div class="form-group col-md-4">
+        <label for="username" class="control-label">Username</label>
+        <input type="text" class="form-control" name="username" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group col-md-4">
+        <label for="password" class="control-label">Password</label>
+        <input type="password" class="form-control" name="password" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group col-md-4">
+        <label for="doughter" class="control-label">Doughter</label>
+        <input type="text" class="form-control" name="doughter" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group col-md-4">
+        <label for="newbalance" class="control-label">New Balance</label>
+        <input type="text" class="form-control" name="newbalance" />
+      </div>
+    </div>
+
+    <button class="btn btn-active">Login</button>
+  </div>
+</form>
+
+
+{% endblock %}
